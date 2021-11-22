@@ -1,0 +1,138 @@
+/* Define common colors used in the theme. */
+:root {
+  --dark-pink: #9e0284;
+  --dark-yellow: #fad2af;
+  --light-pink: #faedf7;
+  --light-purple: #e5b6e4;
+  --light-yellow: #fddfc4;
+}
+
+/* Define the style for the header and footer. */
+.marginals {
+  background-image: url("../images/Cloud.png");
+  background-position: center;
+  font-family: optima;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Define the style and animation of hyperlinks. */
+a {
+  color: var(--dark-pink);
+  text-decoration: none;
+  transition: all 500ms;
+}
+a:hover {
+  font-size: 20px;
+}
+
+/* Define the style of the technical skills section. */
+.technical-skills {
+  text-align: center;
+}
+
+/* Define the style and animation of tables. */
+table {
+  border: 1px solid var(--dark-pink);
+  width: 80%;
+}
+tr,td {
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+tr:nth-child(odd) {
+  background-color: var(--light-purple);
+}
+tr:hover {
+  background-color: var(--light-yellow);
+}
+
+/* Define the style of select images. */
+.profile-picture {
+  border-radius: 50%;
+  box-shadow: 10px 10px var(--light-purple);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-media-icon {
+  padding: 3em;
+}
+.background-image {
+  border-radius: 15%;
+  float: right;
+}
+
+/* Define the style of a button. */
+.button {
+  background-color: var(--light-yellow);
+  box-shadow: 5px 5px var(--light-purple);
+  color: black;
+  font-weight: bold;
+  padding: 1em 1.5em;
+  position: relative;
+  left: 35%;
+  transition: none;
+}
+.button:hover {
+  background-color: var(--dark-yellow);
+  font-size: 16px;
+}
+
+/* Define the characteristics of a CSS Grid Layout. */
+.wrapper {
+  background-color: var(--light-pink);
+  display: grid;
+  font-family: optima;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.item-a {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-b {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-c {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  text-align: center;
+}
+
+/* If the width of the viewport is less then 900 pixels:
+  1. Reduce the size of the text in the navigational panel.
+  2. Move to one column instead of two in the grid layout.
+  3. Reduce the size of the profile picture on the home page.
+  4. Hide the images on the background page.
+*/
+@media only screen and (max-width: 900px) {
+  nav {
+    font-size: 10px;               /*Difference #1*/
+  }
+  .wrapper {
+    grid-template-columns: 1fr;    /*Difference #2*/
+  }
+  .item-a {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .item-b {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .item-c {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .profile-picture {               /*Difference #3*/
+    width: 300px;
+    height: 275px;
+  }
+  .background-image {              /*Difference #4*/
+    display:none;
+  }
+}
