@@ -48,6 +48,11 @@ tr:nth-child(odd) {
 tr:hover {
   background-color: var(--light-yellow);
 }
+#testimonial-table {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 150%;
+}
 
 /* Define the style of select images. */
 .profile-picture {
