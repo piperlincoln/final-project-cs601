@@ -9,3 +9,7 @@ coming weeks, including updating the testimonial database to add entries from
 any visitor to the site, adding a new page about the places I have traveled to,
 and adding in more JavaScript where appropriate to show I have mastered it.
 Thank you so much for taking the time to look at it, I hope you enjoy!
+
+## Hosted Website
+I have hosted this website on GitHub Pages. Please follow this link to visit:
+https://piperlincoln.github.io/final-project-cs601/.
