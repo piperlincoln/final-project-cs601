@@ -99,6 +99,27 @@ tr:hover {
   font-size: 14px;
 }
 
+#gd-stock {
+  color: green;
+  font-weight: bold;
+}
+
+.movie:hover {
+  color: var(--dark-pink);
+  font-weight: bold;
+}
+
+.popup {
+  background-color: var(--light-yellow);
+  border:1px solid var(--dark-pink);
+  display:none;
+  height:50px;
+  margin: 10px;
+  padding: 1px;
+  position:absolute;
+  width:230px;
+}
+
 /* Define the style for a successfully validated input field. */
 .success {
   border-color: green;

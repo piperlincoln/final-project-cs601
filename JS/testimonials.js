@@ -68,7 +68,7 @@ function showMessage(input, message, type) {
  * Author: Piper Lincoln
  */
 function validateName(input, message) {
-  if (!/[^a-zA-Z]/.test(input.value.trim())) {
+  if (!/[^a-zA-Z\s]/.test(input.value.trim())) {
     return showMessage(input, "", true);
   } else {
     return showMessage(input, message, false);
