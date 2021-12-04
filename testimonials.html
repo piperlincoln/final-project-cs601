@@ -19,6 +19,7 @@
       <a href="background.html" target="_self">Background</a> |
       <a href="work.html" target="_self">Current Work</a> |
       <a href="hobbies.html" target="_self">Interests and Hobbies</a> |
+      <a href="traveling.html" target="_self">Traveling</a> |
       <a href="resume.html" target="here">Testimonials</a>
     </nav>
   </header>
@@ -33,6 +34,32 @@
           <th>Testimonial</th>
         </tr>
       </table>
+    </section>
+    <section class="item-b">
+      <h2>Submit Your Own Testimonial</h2>
+      <form onsubmit="return submitTestimonial(this)" id="student-form">
+        <!-- Create the section for the name of the author. -->
+        <section>
+          <label for="authorName">Author Name:</label><br>
+          <input type="text" id="authorName" name="authorName"><br>
+          <small class="error-text"></small><br>
+        </section>
+        <!-- Create the section for the current date. -->
+        <section>
+          <label for="date">Date:</label><br>
+          <input type="text" id="date" name="date"><br>
+          <small class="error-text"></small><br>
+        </section>
+        <!-- Create the section for the testimonial text. -->
+        <section>
+          <label for="testimonial">Testimonial:</label><br>
+          <input type="text" id="testimonial" name="testimonial"><br>
+        </section>
+        <!-- Create the submission button. -->
+        <section>
+          <input class="button" id="submit-button" type="submit" value="Submit">
+        </section>
+      </form>
     </section>
   </main>
   <footer class="marginals"><b>Copyright @2021 Piper Lincoln All Rights Reserved</b></footer>

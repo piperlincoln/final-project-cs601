@@ -51,7 +51,6 @@ tr:hover {
 #testimonial-table {
   margin-top: 40px;
   margin-bottom: 40px;
-  width: 150%;
 }
 
 /* Define the style of select images. */
@@ -75,6 +74,7 @@ tr:hover {
   background-color: var(--light-yellow);
   box-shadow: 5px 5px var(--light-purple);
   color: black;
+  font-family: optima;
   font-weight: bold;
   padding: 1em 1.5em;
   position: relative;
@@ -84,6 +84,32 @@ tr:hover {
 .button:hover {
   background-color: var(--dark-yellow);
   font-size: 16px;
+}
+
+#testimonial {
+  height: 80px;
+  width: 400px;
+}
+
+#submit-button {
+  margin: 20px;
+  width: 200px;
+}
+#submit-button:hover {
+  font-size: 14px;
+}
+
+/* Define the style for a successfully validated input field. */
+.success {
+  border-color: green;
+}
+
+/* Define the style for an input field that failed validation. */
+.error {
+  border-color: red;
+}
+.error-text {
+  color: red;
 }
 
 /* Define the characteristics of a CSS Grid Layout. */

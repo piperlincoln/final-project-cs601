@@ -28,3 +28,49 @@ firebase.database().ref("Testimonials").once('value', function(snapshot){
     $('#testimonial-table').append(content);
   }
 });
+
+function submitTestimonial(form) {
+  // Create the form error messages for validation.
+  const authorNameValidation = "Your name must be only alpha characters.";
+
+  let authorNameValid = validateName(form.authorName, authorNameValidation);
+
+  if (authorNameValid) {
+    const testimonials = firebase.database().ref("Testimonials");
+    testimonials.push().set({
+      Author: form.authorName.value,
+      Date: form.date.value,
+      Text: form.testimonial.value
+    });
+  } else {
+    return false;
+  }
+}
+
+/*
+ * This function shows an error message under the input box if validation fails.
+ *
+ * Author: Piper Lincoln
+ */
+function showMessage(input, message, type) {
+  // Get the element for the error message text and populate it.
+	const msg = input.parentNode.querySelector("small");
+	msg.innerText = message;
+
+  // Set the name of the class so the correct style is applied.
+	input.className = type ? "success" : "error";
+	return type;
+}
+
+/*
+ * This function validates the author name field.
+ *
+ * Author: Piper Lincoln
+ */
+function validateName(input, message) {
+  if (!/[^a-zA-Z]/.test(input.value.trim())) {
+    return showMessage(input, "", true);
+  } else {
+    return showMessage(input, message, false);
+  }
+}
