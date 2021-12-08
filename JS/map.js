@@ -78,7 +78,7 @@ domReady(function() {
           cityArray.forEach(function(city) {
             if (coord[0] == city[1] || coord[1] == city[2]) {
               content.innerHTML = city[0];
-              document.getElementById('city-image').src = "images/" + city[0].split(",")[0] + ".JPG";
+              document.getElementById('city-image').src = "images/" + city[0].split(",")[0] + ".jpg";
               document.getElementById('city-image').style.display = "block";
               document.getElementById('default-text').style.display = "none";
             }
