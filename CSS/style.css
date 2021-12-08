@@ -120,6 +120,16 @@ tr:hover {
   width:230px;
 }
 
+.ol-popup {
+  background-color: var(--light-yellow);
+  border: 1px solid var(--dark-pink);
+  border-radius: 10px;
+  bottom: 12px;
+  min-width: 280px;
+  padding: 10px;
+  position: absolute;
+}
+
 /* Define the style for a successfully validated input field. */
 .success {
   border-color: green;
@@ -131,6 +141,26 @@ tr:hover {
 }
 .error-text {
   color: red;
+}
+
+.map {
+  height: 400px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#city-image {
+  display: none;
+  height: 300px;
+  padding: 20px;
+  width: 500px;
+  margin-left: 15%;
+}
+
+#default-text {
+  color: var(--dark-pink);
+  padding: 50px;
+  text-align: center;
 }
 
 /* Define the characteristics of a CSS Grid Layout. */

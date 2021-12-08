@@ -24,7 +24,7 @@ domReady(function() {
   let welcome = document.getElementById("username");
   if (username === 'null' || username === null) {
     username = askName();
-    welcome.innerText = "Welcome to My Profile, " + username;
+    welcome.innerText = "Welcome to My Portfolio, " + username;
     username = sessionStorage.setItem('Username', username)
   } else {
     welcome.innerText = "Welcome to My Profile, " + username;

@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Traveling</title>
+  <script src="JS/map.js"></script>
   <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <!-- I am using the CSS and JavaScript files provided by OpenLayers to initialize the Map.
+  There are additional CSS and JavaScript files and functions that I wrote myself. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
 </head>
 <body>
   <!-- Include the navigational element at the top of the page. -->
@@ -13,6 +18,7 @@
       <a href="index.html" class="_self">Home</a> |
       <a href="background.html" target="_self">Background</a> |
       <a href="work.html" target="_self">Current Work</a> |
+      <a href="pastwork.html" target="_self">Past Work</a> |
       <a href="hobbies.html" target="_self">Interests and Hobbies</a> |
       <a href="traveling.html" target="here">Traveling</a> |
       <a href="testimonials.html" target="_self">Testimonials</a>
@@ -20,7 +26,17 @@
   </header>
   <main class=wrapper>
     <section class="item-a">
-      <h1>Placeholder for Vue Photo Gallery</h1>
+      <h2>My Favorite European Cities</h2>
+      <section id="map" class="map"></section>
+      <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+      </div>
+    </section>
+    <section class="item-b">
+      <h2>Interactive Picture Gallery</h2>
+      <h3 id="default-text">Click on a City to See a Picture</h3>
+      <img id="city-image" alt="Star Wars Characters" width="625" height="500">
     </section>
   </main>
   <footer class="marginals"><b>Copyright @2021 Piper Lincoln All Rights Reserved</b></footer>
