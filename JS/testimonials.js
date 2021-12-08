@@ -31,11 +31,15 @@ firebase.database().ref("Testimonials").once('value', function(snapshot){
 
 function submitTestimonial(form) {
   // Create the form error messages for validation.
-  const authorNameValidation = "Your name must be only alpha characters.";
+  const authorNameValidation = "Your name must be at least one alpha character.";
+  const dateValidation = "The date field must not be empty.";
+  const testimonialValidation = "The testimonial field must not be empty.";
 
   let authorNameValid = validateName(form.authorName, authorNameValidation);
+  let dateValid = validateLength(form.date, dateValidation);
+  let testimonialValid = validateLength(form.testimonial, testimonialValidation);
 
-  if (authorNameValid) {
+  if (authorNameValid && dateValid && testimonialValid) {
     const testimonials = firebase.database().ref("Testimonials");
     testimonials.push().set({
       Author: form.authorName.value,
@@ -68,7 +72,20 @@ function showMessage(input, message, type) {
  * Author: Piper Lincoln
  */
 function validateName(input, message) {
-  if (!/[^a-zA-Z\s]/.test(input.value.trim())) {
+  if (!/[^a-zA-Z\s]/.test(input.value.trim()) && input.value.trim().length > 0) {
+    return showMessage(input, "", true);
+  } else {
+    return showMessage(input, message, false);
+  }
+}
+
+/*
+ * This function validates the length of the date and testimonial fields.
+ *
+ * Author: Piper Lincoln
+ */
+function validateLength(input, message) {
+  if (input.value.trim().length > 0) {
     return showMessage(input, "", true);
   } else {
     return showMessage(input, message, false);
