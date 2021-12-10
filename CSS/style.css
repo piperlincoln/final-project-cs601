@@ -185,6 +185,31 @@ tr:hover {
   text-align: center;
 }
 
+.app {
+  background-color: var(--light-pink);
+  display: grid;
+  font-family: optima;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.resume {
+  text-align: left;
+}
+
+.resume-heading {
+  color: var(--dark-pink);
+  padding: 10px;
+}
+
+.resume-image {
+  border-radius: 10%;
+  box-shadow: 10px 10px var(--light-purple);
+  height: 400px;
+  margin: 10px;
+  width: 600px;
+}
+
 /* If the width of the viewport is less then 900 pixels:
   1. Reduce the size of the text in the navigational panel.
   2. Move to one column instead of two in the grid layout.
