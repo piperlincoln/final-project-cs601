@@ -16,6 +16,28 @@
   text-align: center;
 }
 
+/* Define the characteristics of a CSS Grid Layout. */
+.wrapper {
+  background-color: var(--light-pink);
+  display: grid;
+  font-family: optima;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.item-a {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-b {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-c {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  text-align: center;
+}
+
 /* Define the style and animation of hyperlinks. */
 a {
   color: var(--dark-pink);
@@ -48,10 +70,6 @@ tr:nth-child(odd) {
 tr:hover {
   background-color: var(--light-yellow);
 }
-#testimonial-table {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 
 /* Define the style of select images. */
 .profile-picture {
@@ -69,16 +87,16 @@ tr:hover {
   float: right;
 }
 
-/* Define the style of a button. */
+/* Define the style of buttons. */
 .button {
   background-color: var(--light-yellow);
   box-shadow: 5px 5px var(--light-purple);
   color: black;
   font-family: optima;
   font-weight: bold;
+  left: 35%;
   padding: 1em 1.5em;
   position: relative;
-  left: 35%;
   transition: none;
 }
 .button:hover {
@@ -86,48 +104,21 @@ tr:hover {
   font-size: 16px;
 }
 
+/* Define the style of the testimonial table and form. */
 #testimonial {
   height: 80px;
   width: 400px;
 }
-
+#testimonial-table {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
 #submit-button {
   margin: 20px;
   width: 200px;
 }
 #submit-button:hover {
   font-size: 14px;
-}
-
-#gd-stock {
-  color: green;
-  font-weight: bold;
-}
-
-.movie:hover {
-  color: var(--dark-pink);
-  font-weight: bold;
-}
-
-.popup {
-  background-color: var(--light-yellow);
-  border:1px solid var(--dark-pink);
-  display:none;
-  height:50px;
-  margin: 10px;
-  padding: 1px;
-  position:absolute;
-  width:230px;
-}
-
-.ol-popup {
-  background-color: var(--light-yellow);
-  border: 1px solid var(--dark-pink);
-  border-radius: 10px;
-  bottom: 12px;
-  min-width: 280px;
-  padding: 10px;
-  position: absolute;
 }
 
 /* Define the style for a successfully validated input field. */
@@ -143,48 +134,59 @@ tr:hover {
   color: red;
 }
 
+/* Define the style of the stock price of the GD Corporation. */
+#gd-stock {
+  color: green;
+  font-weight: bold;
+}
+
+/* Define the style for the list of Star Wars movies. */
+.movie:hover {
+  color: var(--dark-pink);
+  font-weight: bold;
+}
+
+/* Define the style for the map and city images. */
 .map {
   height: 400px;
   margin-bottom: 10px;
   width: 100%;
 }
-
 #city-image {
   display: none;
   height: 300px;
+  margin-left: 15%;
   padding: 20px;
   width: 500px;
-  margin-left: 15%;
 }
-
 #default-text {
   color: var(--dark-pink);
   padding: 50px;
   text-align: center;
 }
 
-/* Define the characteristics of a CSS Grid Layout. */
-.wrapper {
-  background-color: var(--light-pink);
-  display: grid;
-  font-family: optima;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+/* Define the style for the popups used on the map pins. */
+.popup {
+  background-color: var(--light-yellow);
+  border:1px solid var(--dark-pink);
+  display:none;
+  height:50px;
+  margin: 10px;
+  padding: 1px;
+  position: absolute;
+  width:230px;
 }
-.item-a {
-  grid-column: 1;
-  grid-row: 1;
-}
-.item-b {
-  grid-column: 2;
-  grid-row: 1;
-}
-.item-c {
-  grid-column: 1 / 3;
-  grid-row: 2;
-  text-align: center;
+.ol-popup {
+  background-color: var(--light-yellow);
+  border: 1px solid var(--dark-pink);
+  border-radius: 10px;
+  bottom: 12px;
+  min-width: 280px;
+  padding: 10px;
+  position: absolute;
 }
 
+/* Define the style for the Vue photo gallery text and image components. */
 .app {
   background-color: var(--light-pink);
   display: grid;
@@ -192,11 +194,9 @@ tr:hover {
   grid-template-columns: 1fr 1fr;
   text-align: center;
 }
-
 .resume {
   text-align: left;
 }
-
 .resume-image {
   border-radius: 10%;
   box-shadow: 10px 10px var(--light-purple);
@@ -204,7 +204,6 @@ tr:hover {
   margin: 10px;
   width: 600px;
 }
-
 .resume-link {
   display: block;
   font-size: 1.17em;
