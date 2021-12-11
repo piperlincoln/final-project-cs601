@@ -7,6 +7,13 @@
   --light-yellow: #fddfc4;
 }
 
+/* Define the style for the body of the page. */
+body {
+  background-color: var(--light-pink);
+  margin: 0;
+  padding: 0;
+}
+
 /* Define the style for the header and footer. */
 .marginals {
   background-image: url("../images/Cloud.png");
@@ -14,6 +21,9 @@
   font-family: optima;
   padding: 1em;
   text-align: center;
+}
+footer {
+  height: 40px;
 }
 
 /* Define the characteristics of a CSS Grid Layout. */
@@ -23,6 +33,9 @@
   font-family: optima;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  margin: 10px;
+  min-height: calc(100vh - 70px);
+  padding: 10px;
 }
 .item-a {
   grid-column: 1;
