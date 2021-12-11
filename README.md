@@ -1,6 +1,11 @@
 # CS 601 Final Project
 The repository for my portfolio website final project for MET CS 601.
 
+## Demonstration Suggestions
+I implemented two of the suggestions that Professor Looper gave me during my
+final demonstration. The first was to remove the default browser margin around
+my content, and the second was to make my footer sticky.
+
 ## Extra Credit Elements
 #### ES6 Features
 There are several ES6 features we discussed in Module 5 implemented on my
