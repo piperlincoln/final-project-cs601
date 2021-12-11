@@ -39,30 +39,39 @@ export default {
   template: `
     <section class="app">
       <section class="resume">
-        <h3 class="resume-heading">Wisconsin Icecube Particle Astrophysics Center</h3>
+        <a class=resume-link href="https://www.linkedin.com/company/wisconsin-icecube-particle-astrophysics-center/">Wisconsin Icecube Particle Astrophysics Center</a>
         <ul>
           <li>Member of Askaryan Radio Array Project and Tau Neutrino Search Team</li>
           <li>Analyzed and presented flasher calibration data from IceCube detector in Antarctica</li>
         </ul>
-        <h3 class="resume-heading">Computational Nuclear Engineering Research Group</h3>
+        <a class="resume-link" href="https://cnerg.github.io/">Computational Nuclear Engineering Research Group</a>
         <ul>
           <li>Streamlined software to visualize complex nuclear processes in CAD-based geometry</li>
           <li>Developed documentation for Direct Accelerated Geometry Monte Carlo Toolkit</li>
         </ul>
-        <h3 class="resume-heading">General Dynamics Tactical Control System</h3>
+        <a class="resume-link" href="https://gdmissionsystems.com/shipboard-integration-and-combat-systems/tactical-control-systems">General Dynamics Tactical Control System</a>
         <ul>
           <li>Continuously delivered work on schedule as part of agile framework</li>
           <li>Developed and tested tactical control system for Naval Underwater Warfare division</li>
         </ul>
       </section>
       <section>
-        <img :src="wipacPictureHover" @mouseover="wipacHover = true" @mouseleave="wipacHover = false" class=resume-image>
+        <figure>
+          <img :src="wipacPictureHover" @mouseover="wipacHover = true" @mouseleave="wipacHover = false" class=resume-image>
+          <figcaption>The IceCube Tau Neutrino Observatory in Antarctica.</figcaption>
+        </figure>
       </section>
       <section>
-        <img :src="cnergPictureHover" @mouseover="cnergHover = true" @mouseleave="cnergHover = false" class=resume-image>
+        <figure>
+          <img :src="cnergPictureHover" @mouseover="cnergHover = true" @mouseleave="cnergHover = false" class=resume-image>
+          <figcaption>A CAD model from CNERG showing radiation levels.</figcaption>
+        </figure>
       </section>
       <section>
-        <img :src="tcsPictureHover" @mouseover="tcsHover = true" @mouseleave="tcsHover = false" class=resume-image>
+        <figure>
+          <img :src="tcsPictureHover" @mouseover="tcsHover = true" @mouseleave="tcsHover = false" class=resume-image>
+          <figcaption>A US Navy submarine with TCS onboard.</figcaption>
+        </figure>
       </section>
     </section>
     `

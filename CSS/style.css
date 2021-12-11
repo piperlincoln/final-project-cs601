@@ -197,16 +197,22 @@ tr:hover {
   text-align: left;
 }
 
-.resume-heading {
-  padding: 10px;
-}
-
 .resume-image {
   border-radius: 10%;
   box-shadow: 10px 10px var(--light-purple);
   height: 400px;
   margin: 10px;
   width: 600px;
+}
+
+.resume-link {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 0;
 }
 
 /* If the width of the viewport is less then 900 pixels:
