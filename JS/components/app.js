@@ -1,29 +1,33 @@
 export default {
   name: "App",
   computed: {
+    // Define the behavior of hovering over the WIPAC image.
     wipacPictureHover () {
       if (this.wipacHover == true) {
-        return this.wipacViz
+        return this.wipacViz;
       } else {
-        return this.wipac
+        return this.wipac;
       }
     },
+    // Define the behavior of hovering over the CNERG image.
     cnergPictureHover () {
       if (this.cnergHover == true) {
-        return this.cnergViz
+        return this.cnergViz;
       } else {
-        return this.cnerg
+        return this.cnerg;
       }
     },
+    // Define the behavior of hovering over the submarine image.
     tcsPictureHover () {
       if (this.tcsHover == true) {
-        return this.tcsViz
+        return this.tcsViz;
       } else {
-        return this.tcs
+        return this.tcs;
       }
     }
   },
   data () {
+    // Define the image locations and hovering property.
     return {
       wipac: "https://cdn.mos.cms.futurecdn.net/MWb886Sjc3b5BrfootSedS.jpg",
       wipacViz: "https://www.researchgate.net/profile/Federico-Monti-4/publication/327717837/figure/fig1/AS:672056928661504@1537242266051/The-IceCube-Neutrino-Observatory-with-the-in-ice-array-its-subarray-DeepCore-and-the.jpg",
@@ -34,8 +38,9 @@ export default {
       tcs: "https://gdmissionsystems.com/-/media/General-Dynamics/Maritime-and-Strategic-Systems/Images/Submarine-Tactical-Control-Systems-02.ashx?h=503&w=894&la=en&hash=627A7F1558E70F7C66DB26F55F3D5F9BDD951272",
       tcsViz: "https://gdmissionsystems.com/-/media/General-Dynamics/Ground-Systems/Images/air-force-icbm-01.ashx?h=501&w=1155&la=en&hash=68EE8DFFAAE8819D8B9C91E0D05F6773E5A37CF8",
       tcsHover: false
-    }
+    };
   },
+  // Define the HTML elements in the component.
   template: `
     <section class="app">
       <section class="resume">
@@ -57,19 +62,19 @@ export default {
       </section>
       <section>
         <figure>
-          <img :src="wipacPictureHover" @mouseover="wipacHover = true" @mouseleave="wipacHover = false" class=resume-image>
+          <img :src="wipacPictureHover" @mouseover="wipacHover = true" @mouseleave="wipacHover = false" class=resume-image alt="IceCube Observatory in Antarctica">
           <figcaption>The IceCube Tau Neutrino Observatory in Antarctica.</figcaption>
         </figure>
       </section>
       <section>
         <figure>
-          <img :src="cnergPictureHover" @mouseover="cnergHover = true" @mouseleave="cnergHover = false" class=resume-image>
+          <img :src="cnergPictureHover" @mouseover="cnergHover = true" @mouseleave="cnergHover = false" class=resume-image alt="CAD Model Showing Radiation">
           <figcaption>A CAD model from CNERG showing radiation levels.</figcaption>
         </figure>
       </section>
       <section>
         <figure>
-          <img :src="tcsPictureHover" @mouseover="tcsHover = true" @mouseleave="tcsHover = false" class=resume-image>
+          <img :src="tcsPictureHover" @mouseover="tcsHover = true" @mouseleave="tcsHover = false" class=resume-image alt="US Navy Submarine">
           <figcaption>A US Navy submarine with TCS onboard.</figcaption>
         </figure>
       </section>

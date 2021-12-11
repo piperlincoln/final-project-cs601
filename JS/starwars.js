@@ -14,42 +14,35 @@ function domReady(fn) {
 }
 
 /*
- * This function displays a welcome message with the name of the user.
+ * This function creates popups when the user hovers over the Star Wars movie.
  *
- * Author: Josh Hanson
- * Modifier: Piper Lincoln
+ * Author: Piper Lincoln
  */
 domReady(function() {
-  var firstMovie = document.getElementById('first-movie');
-  var secondMovie = document.getElementById('second-movie');
-  var thirdMovie = document.getElementById('third-movie');
-  var fourthMovie = document.getElementById('fourth-movie');
-  var fifthMovie = document.getElementById('fifth-movie');
-  var sixthMovie = document.getElementById('sixth-movie');
-  var seventhMovie = document.getElementById('seventh-movie');
-  var eighthMovie = document.getElementById('eighth-movie');
-  var ninthMovie = document.getElementById('ninth-movie');
-  var tenthMovie = document.getElementById('tenth-movie');
-  var eleventhMovie = document.getElementById('eleventh-movie');
-
-  createMouseEvents(firstMovie, 'first-popup');
-  createMouseEvents(secondMovie, 'second-popup');
-  createMouseEvents(thirdMovie, 'third-popup');
-  createMouseEvents(fourthMovie, 'fourth-popup');
-  createMouseEvents(fifthMovie, 'fifth-popup');
-  createMouseEvents(sixthMovie, 'sixth-popup');
-  createMouseEvents(seventhMovie, 'seventh-popup');
-  createMouseEvents(eighthMovie, 'eighth-popup');
-  createMouseEvents(ninthMovie, 'ninth-popup');
-  createMouseEvents(tenthMovie, 'tenth-popup');
-  createMouseEvents(eleventhMovie, 'eleventh-popup');
+  // Define event listeners that will open the relevant popup on hover.
+  createMouseEvents(document.getElementById('first-movie'), 'first-popup');
+  createMouseEvents(document.getElementById('second-movie'), 'second-popup');
+  createMouseEvents(document.getElementById('third-movie'), 'third-popup');
+  createMouseEvents(document.getElementById('fourth-movie'), 'fourth-popup');
+  createMouseEvents(document.getElementById('fifth-movie'), 'fifth-popup');
+  createMouseEvents(document.getElementById('sixth-movie'), 'sixth-popup');
+  createMouseEvents(document.getElementById('seventh-movie'), 'seventh-popup');
+  createMouseEvents(document.getElementById('eighth-movie'), 'eighth-popup');
+  createMouseEvents(document.getElementById('ninth-movie'), 'ninth-popup');
+  createMouseEvents(document.getElementById('tenth-movie'), 'tenth-popup');
+  createMouseEvents(document.getElementById('eleventh-movie'), 'eleventh-popup');
 });
 
+/*
+ * This function opens popups with information about each Star Wars movie.
+ *
+ * Author: Piper Lincoln
+ */
 function createMouseEvents(movie, popup) {
   movie.onmouseover = function() {
     document.getElementById(popup).style.display = 'block';
-  }
+  };
   movie.onmouseout = function() {
     document.getElementById(popup).style.display = 'none';
-  }
+  };
 }

@@ -16,16 +16,16 @@ function domReady(fn) {
 /*
  * This function displays a welcome message with the name of the user.
  *
- * Author: Josh Hanson
- * Modifier: Piper Lincoln
+ * Author: Piper Lincoln
  */
 domReady(function() {
   var username = sessionStorage.getItem('Username');
   let welcome = document.getElementById("username");
+  // Check if the username is already in session storage before prompting.
   if (username === 'null' || username === null) {
     username = askName();
     welcome.innerText = "Welcome to My Portfolio, " + username;
-    username = sessionStorage.setItem('Username', username)
+    username = sessionStorage.setItem('Username', username);
   } else {
     welcome.innerText = "Welcome to My Profile, " + username;
   }
@@ -34,8 +34,7 @@ domReady(function() {
 /*
  * This function prompts the user for their name.
  *
- * Author: Josh Hanson
- * Modifier: Piper Lincoln
+ * Author: Piper Lincoln
  */
 function askName() {
     return prompt("Welcome to my Portfolio! Please tell me your name.");

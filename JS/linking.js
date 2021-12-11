@@ -14,16 +14,18 @@ function domReady(fn) {
 }
 
 /*
- * This function displays a welcome message with the name of the user.
+ * This function links to the relevant background section when a
+ * user clicks on the corresponding row in the table.
  *
- * Author: Josh Hanson
- * Modifier: Piper Lincoln
+ * Author: Piper Lincoln
  */
 domReady(function() {
-  const row = document.getElementById(`row-1`);
-  row.addEventListener("click", () => {
+  // The first row should link to the Minnesota section.
+  const firstRow = document.getElementById(`row-1`);
+  firstRow.addEventListener("click", () => {
     window.location.href = `#section-1`;
   });
+  // The next five rows should link to the five sections.
   for (let i = 2; i < 7; i++) {
     const row = document.getElementById(`row-${i}`);
     row.addEventListener("click", () => {

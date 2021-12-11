@@ -13,7 +13,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Put Data into Table
+// Pull Data from Database into Table
 firebase.database().ref("Testimonials").once('value', function(snapshot){
   if(snapshot.exists()){
     var content = '';
@@ -29,16 +29,23 @@ firebase.database().ref("Testimonials").once('value', function(snapshot){
   }
 });
 
+/*
+ * This function submits a new testimonial to the database from a form.
+ *
+ * Author: Piper Lincoln
+ */
 function submitTestimonial(form) {
   // Create the form error messages for validation.
   const authorNameValidation = "Your name must be at least one alpha character.";
   const dateValidation = "The date field must not be empty.";
   const testimonialValidation = "The testimonial field must not be empty.";
 
+  // Validate the author's name, date, and testimonial fields.
   let authorNameValid = validateName(form.authorName, authorNameValidation);
   let dateValid = validateLength(form.date, dateValidation);
   let testimonialValid = validateLength(form.testimonial, testimonialValidation);
 
+  // Only submit this to the database if the validation is successful.
   if (authorNameValid && dateValid && testimonialValid) {
     const testimonials = firebase.database().ref("Testimonials");
     testimonials.push().set({
